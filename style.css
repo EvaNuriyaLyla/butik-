@@ -1,0 +1,433 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Georgia", serif;
+  background: #faf7f3;
+  color: #3d3530;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(250, 247, 243, 0.95);
+  border-bottom: 1px solid #e6ddd5;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 20px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 25px;
+  letter-spacing: 4px;
+  font-weight: bold;
+
+  color: #6d5143;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+
+  color: #4c4039;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a47760;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 85vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 60px 20px;
+
+  background:
+    linear-gradient(
+      rgba(70, 50, 40, 0.25),
+      rgba(70, 50, 40, 0.25)
+    ),
+    url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1600&q=80")
+    center / cover;
+
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 8vw, 85px);
+
+  letter-spacing: 8px;
+
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 19px;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-block;
+
+  padding: 14px 32px;
+
+  background: #fff;
+  color: #5b4438;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #6d5143;
+  color: white;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 90px 30px;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.section-title span {
+  color: #a47760;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+
+  font-weight: normal;
+
+  margin-top: 8px;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.product {
+  background: white;
+
+  overflow: hidden;
+
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(80, 60, 50, 0.12);
+}
+
+.product img {
+  width: 100%;
+  height: 380px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.product-info {
+  padding: 20px;
+
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 18px;
+
+  font-weight: normal;
+
+  margin-bottom: 5px;
+}
+
+.price {
+  color: #a47760;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  max-width: none;
+
+  background: #eee5de;
+}
+
+.about-content {
+  max-width: 900px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 18px;
+
+  color: #63574f;
+}
+
+
+/* =========================
+   COLLECTION
+========================= */
+
+.collection {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 25px;
+}
+
+.collection-card {
+  height: 500px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.collection-card:hover img {
+  transform: scale(1.05);
+}
+
+.collection-text {
+  position: absolute;
+
+  bottom: 30px;
+  left: 30px;
+
+  color: white;
+
+  text-shadow:
+    0 2px 8px
+    rgba(0, 0, 0, 0.5);
+}
+
+.collection-text h3 {
+  font-size: 32px;
+
+  font-weight: normal;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 25px;
+
+  font-family: Arial, sans-serif;
+
+  color: #6d625b;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #3f332c;
+
+  color: #eee5de;
+
+  text-align: center;
+
+  padding: 40px 20px;
+}
+
+footer .logo {
+  color: white;
+
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  color: #cfc2b9;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .products {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+}
+
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero h1 {
+    letter-spacing: 4px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .collection {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card {
+    height: 400px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+}
